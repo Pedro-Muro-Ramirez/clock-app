@@ -1,0 +1,77 @@
+/* font-family: 'Inter', sans-serif; */
+
+:root {
+  --black: #000000;
+  --light-black: #303030;
+  --white: #ffffff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+.bg-morning {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('assets/desktop/bg-image-daytime.jpg');
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100%;
+  width: auto;
+  overflow: hidden;
+}
+.main-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 500px;
+  margin-left: 10%;
+  text-align: center;
+  color: var(--white);
+}
+.quote-container {
+  margin-top: 8%;
+
+  text-align: left;
+}
+.quote {
+  height: auto;
+  width: auto;
+  font-size: 110%;
+}
+.author {
+  margin-top: 4%;
+  font-size: 90%;
+  font-weight: 700;
+}
+.time-container {
+  text-align: left;
+  margin-top: 40%;
+  display: flex;
+  flex-flow: row wrap;
+}
+.day-or-night {
+  font-size: 140%;
+  text-transform: uppercase;
+  flex-basis: 80%;
+}
+.time {
+  font-size: 800%;
+  flex-basis: 80%;
+  font-weight: 700;
+}
+.time-zone {
+  font-size: 300%;
+  flex-basis: 20%;
+  margin-bottom: 5%;
+  align-self: flex-end;
+}
+.location {
+  font-size: 250%;
+  font-weight: 700;
+  flex-basis: 100%;
+}
