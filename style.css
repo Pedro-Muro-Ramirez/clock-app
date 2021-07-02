@@ -24,6 +24,18 @@
   width: auto;
   overflow: hidden;
 }
+.bg-evening {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('starter-code/assets/desktop/bg-image-nighttime.jpg');
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100%;
+  width: auto;
+  overflow: hidden;
+}
 .main-container {
   display: flex;
   flex-direction: column;

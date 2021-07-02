@@ -1,3 +1,4 @@
+//Generate Quote
 const url = 'https://api.quotable.io/random';
 
 function generateQuote() {
@@ -13,7 +14,6 @@ function generateQuote() {
       console.log(err);
     });
 }
-
 generateQuote();
 
 // Location
@@ -35,10 +35,27 @@ let zone = new Date()
 document.querySelector('.time-zone').innerHTML = zone;
 
 let today = function () {
-  document.querySelector('.time').innerHTML = moment().format('H:m');
+  const liveTime = moment().format('H:mm');
+  document.querySelector('.time').innerHTML = liveTime;
 };
-//   moment().format('H:m');
-// document.querySelector('.time').innerHTML = today;
-
 today();
+console.log(today);
 setInterval(today, 1000);
+
+//Change Background
+const timeMessage = document.querySelector('.day-or-night');
+const morning = document.getElementById('bg');
+const backgroundChange = function () {
+  let t = new Date().getHours();
+  if (t <= 7 || t > 20) {
+    timeMessage.textContent = `good evening, it's currently`;
+    morning.classList.add('bg-evening');
+    morning.classList.remove('bg-morning');
+  } else {
+    timeMessage.textContent = `good morning, it's currently`;
+    morning.classList.remove('bg-evening');
+    morning.classList.add('bg-morning');
+  }
+};
+backgroundChange();
+setInterval(backgroundChange, 1000);
