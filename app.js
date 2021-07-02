@@ -16,6 +16,7 @@ function generateQuote() {
 
 generateQuote();
 
+// Location
 fetch('https://extreme-ip-lookup.com/json/')
   .then(res => res.json())
   .then(response => {
@@ -31,6 +32,13 @@ fetch('https://extreme-ip-lookup.com/json/')
 let zone = new Date()
   .toLocaleTimeString('en-us', { timeZoneName: 'short' })
   .split(' ')[2];
-let today = moment().format('H:m');
-document.querySelector('.time').innerHTML = today;
 document.querySelector('.time-zone').innerHTML = zone;
+
+let today = function () {
+  document.querySelector('.time').innerHTML = moment().format('H:m');
+};
+//   moment().format('H:m');
+// document.querySelector('.time').innerHTML = today;
+
+today();
+setInterval(today, 1000);

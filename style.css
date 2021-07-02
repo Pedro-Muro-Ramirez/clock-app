@@ -14,7 +14,7 @@
 }
 .bg-morning {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url('assets/desktop/bg-image-daytime.jpg');
+    url('starter-code/assets/desktop/bg-image-daytime.jpg');
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
