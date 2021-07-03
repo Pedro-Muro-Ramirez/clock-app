@@ -40,7 +40,7 @@ let today = function () {
 };
 today();
 console.log(today);
-setInterval(today, 1000);
+// setInterval(today, 1000);
 
 //Change Background
 const timeMessage = document.querySelector('.day-or-night');
@@ -58,4 +58,37 @@ const backgroundChange = function () {
   }
 };
 backgroundChange();
-setInterval(backgroundChange, 1000);
+// setInterval(backgroundChange, 1000);
+
+//BUTTON
+// const btn = document.getElementById('show-more');
+// const btnLess = document.getElementById('show-less');
+// btn.addEventListener('click', function () {
+//   if (btn.style.display === 'block') {
+//     btnLess.style.display = 'block';
+//     btn.style.display = 'none';
+//   } else {
+//     btnLess.style.display = 'none';
+//     btn.style.display = 'block';
+//   }
+// });
+
+const btnLogic = function () {
+  const btn = document.querySelector('.btn-more');
+  const btnText = document.querySelector('.btn-text');
+  const btnArrow = document.querySelector('.btn-arrow');
+  const expandSection = document.querySelector('.expand-box');
+
+  btn.addEventListener('click', function () {
+    // expandSection.classList.toggle('expand-appear');
+    // expandSection.scrollIntoView();
+    if (btnText.innerHTML === 'LESS') {
+      btnText.innerHTML = 'MORE';
+      btnArrow.classList.remove('btn-arrow-up');
+    } else {
+      btnText.innerHTML = 'LESS';
+      btnArrow.classList.add('btn-arrow-up');
+    }
+  });
+};
+btnLogic();

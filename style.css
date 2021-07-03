@@ -12,6 +12,13 @@
   box-sizing: border-box;
   font-family: 'Inter', sans-serif;
 }
+.big-container {
+  display: flex;
+  width: auto;
+  height: 100vh;
+  border: solid 2px pink;
+  flex-flow: row wrap;
+}
 .bg-morning {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url('starter-code/assets/desktop/bg-image-daytime.jpg');
@@ -40,15 +47,15 @@
   display: flex;
   flex-direction: column;
   height: 100vh;
-  width: 500px;
-  margin-left: 10%;
   text-align: center;
   color: var(--white);
+  flex-basis: 75%;
 }
 .quote-container {
-  margin-top: 8%;
-
+  margin-top: 5%;
   text-align: left;
+  margin-left: 10%;
+  width: 700px;
 }
 .quote {
   height: auto;
@@ -62,28 +69,58 @@
 }
 .time-container {
   text-align: left;
-  margin-top: 40%;
+  margin-top: 25%;
   display: flex;
   flex-flow: row wrap;
+  margin-left: 10%;
 }
 .day-or-night {
   font-size: 140%;
   text-transform: uppercase;
-  flex-basis: 80%;
+  flex-basis: 100%;
 }
 .time {
   font-size: 800%;
-  flex-basis: 80%;
+  flex-basis: 50%;
   font-weight: 700;
 }
 .time-zone {
   font-size: 300%;
-  flex-basis: 20%;
-  margin-bottom: 5%;
+  flex-basis: 50%;
+  margin-bottom: 3%;
   align-self: flex-end;
 }
 .location {
   font-size: 250%;
   font-weight: 700;
   flex-basis: 100%;
+}
+.button-container {
+  height: 100vh;
+  flex-basis: 25%;
+}
+.btn-more {
+  display: flex;
+  margin-top: 170%;
+  cursor: pointer;
+  height: 50px;
+  width: 150px;
+  border-radius: 50px;
+  letter-spacing: 1px;
+  align-items: center;
+  border: none;
+  justify-content: center;
+}
+.btn-text {
+  letter-spacing: 1px;
+  margin-right: 2%;
+  font-size: 110%;
+}
+.btn-arrow {
+  transform: rotate(180deg);
+  height: 40px;
+  width: auto;
+}
+.btn-arrow-up {
+  transform: rotate(0deg);
 }
