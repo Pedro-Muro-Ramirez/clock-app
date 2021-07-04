@@ -64,11 +64,11 @@ const btnLogic = function () {
   const btn = document.querySelector('.btn-more');
   const btnText = document.querySelector('.btn-text');
   const btnArrow = document.querySelector('.btn-arrow');
-  const expandSection = document.querySelector('.expand-box');
+  const expandSection = document.querySelector('.hidden');
 
   btn.addEventListener('click', function () {
-    // expandSection.classList.toggle('expand-appear');
-    // expandSection.scrollIntoView();
+    expandSection.classList.toggle('show');
+    expandSection.scrollIntoView();
     if (btnText.innerHTML === 'LESS') {
       btnText.innerHTML = 'MORE';
       btnArrow.classList.remove('btn-arrow-up');

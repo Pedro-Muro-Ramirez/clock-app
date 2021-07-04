@@ -16,7 +16,6 @@
   display: flex;
   width: auto;
   height: 100vh;
-  border: solid 2px pink;
   flex-flow: row wrap;
 }
 .bg-morning {
@@ -130,48 +129,47 @@
   height: 50vh;
   width: 100%;
   background-color: rgba(240, 239, 239, 0.925);
-  border: 1px solid blue;
+  overflow: hidden;
 }
 .info-container {
   display: flex;
   height: 200px;
   width: 700px;
-  border: 2px solid black;
-  margin: 5% 0 0 20%;
+  margin: 5% auto;
   text-transform: uppercase;
   flex-flow: row wrap;
 }
 .expanded-time-zone {
   flex-basis: 60%;
-  font-size: 80%;
+  font-size: 105%;
   letter-spacing: 1px;
 }
 .expaned-text {
-  font-size: 200%;
+  font-size: 240%;
   font-weight: 700;
   margin-top: 2%;
 }
 .day-of-week {
   flex-basis: 40%;
-  font-size: 80%;
+  font-size: 105%;
   letter-spacing: 1px;
   text-align: center;
 }
 .day-of-year {
   flex-basis: 60%;
-  font-size: 80%;
+  font-size: 105%;
   letter-spacing: 1px;
 }
 .week {
   flex-basis: 40%;
-  font-size: 80%;
+  font-size: 105%;
   letter-spacing: 1px;
   text-align: center;
 }
 
-.show {
-  display: block;
-}
 .hidden {
   display: none;
+}
+.show {
+  display: block;
 }
