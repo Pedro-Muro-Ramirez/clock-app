@@ -60,19 +60,6 @@ const backgroundChange = function () {
 backgroundChange();
 // setInterval(backgroundChange, 1000);
 
-//BUTTON
-// const btn = document.getElementById('show-more');
-// const btnLess = document.getElementById('show-less');
-// btn.addEventListener('click', function () {
-//   if (btn.style.display === 'block') {
-//     btnLess.style.display = 'block';
-//     btn.style.display = 'none';
-//   } else {
-//     btnLess.style.display = 'none';
-//     btn.style.display = 'block';
-//   }
-// });
-
 const btnLogic = function () {
   const btn = document.querySelector('.btn-more');
   const btnText = document.querySelector('.btn-text');
