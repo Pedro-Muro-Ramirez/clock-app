@@ -45,14 +45,18 @@ setInterval(today, 1000);
 //Change Background
 const timeMessage = document.querySelector('.day-or-night');
 const morning = document.getElementById('bg');
+const expandColor = document.querySelector('.expanded-container ');
 const backgroundChange = function () {
   let t = new Date().getHours();
   if (t <= 7 || t > 20) {
     timeMessage.textContent = `good evening, it's currently`;
+    expandColor.classList.add('bg-black');
     morning.classList.add('bg-evening');
     morning.classList.remove('bg-morning');
   } else {
     timeMessage.textContent = `good morning, it's currently`;
+    expandColor.classList.remove('bg-black');
+    expandColor.classList.add('bg-white');
     morning.classList.remove('bg-evening');
     morning.classList.add('bg-morning');
   }
