@@ -79,3 +79,35 @@ const btnLogic = function () {
   });
 };
 btnLogic();
+
+// Days information
+let dayOfWeek = new Date();
+let day = dayOfWeek.getDay();
+document.querySelector('.day-week-text').innerHTML = day;
+
+let now = new Date();
+let start = new Date(now.getFullYear(), 0, 0);
+let diff =
+  now -
+  start +
+  (start.getTimezoneOffset() - now.getTimezoneOffset()) * 60 * 1000;
+let oneDay = 1000 * 60 * 60 * 24;
+let dayOfYear = Math.floor(diff / oneDay);
+document.querySelector('.day-year-text').innerHTML = dayOfYear;
+
+let timeZone2 = Intl.DateTimeFormat().resolvedOptions().timeZone;
+document.querySelector('.tz-text').innerHTML = timeZone2;
+
+//week of year
+// Source: https://stackoverflow.com/questions/6117814/get-week-of-year-in-javascript-like-in-php
+Date.prototype.getWeekNumber = function () {
+  var d = new Date(
+    Date.UTC(this.getFullYear(), this.getMonth(), this.getDate())
+  );
+  var dayNum = d.getUTCDay() || 7;
+  d.setUTCDate(d.getUTCDate() + 4 - dayNum);
+  var yearStart = new Date(Date.UTC(d.getUTCFullYear(), 0, 1));
+  return Math.ceil(((d - yearStart) / 86400000 + 1) / 7);
+};
+
+document.querySelector('.week-year').innerHTML = new Date().getWeekNumber();
