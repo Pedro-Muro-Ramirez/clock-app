@@ -54,11 +54,17 @@ const backgroundChange = function () {
     morning.classList.add('bg-evening');
     morning.classList.remove('bg-morning');
   } else {
-    timeMessage.textContent = `good morning, it's currently`;
     expandColor.classList.remove('bg-black');
     expandColor.classList.add('bg-white');
     morning.classList.remove('bg-evening');
     morning.classList.add('bg-morning');
+  }
+  if (t > 5 && t < 12) {
+    timeMessage.textContent = `good morning, it's currently`;
+  } else if (t > 12 && t < 18) {
+    timeMessage.textContent = `good afternoon, it's currently`;
+  } else {
+    timeMessage.textContent = `good evening, it's currently`;
   }
 };
 backgroundChange();
