@@ -40,7 +40,7 @@ let today = function () {
 };
 today();
 console.log(today);
-// setInterval(today, 1000);
+setInterval(today, 1000);
 
 //Change Background
 const timeMessage = document.querySelector('.day-or-night');
@@ -58,7 +58,7 @@ const backgroundChange = function () {
   }
 };
 backgroundChange();
-// setInterval(backgroundChange, 1000);
+setInterval(backgroundChange, 1000);
 
 const btnLogic = function () {
   const btn = document.querySelector('.btn-more');
