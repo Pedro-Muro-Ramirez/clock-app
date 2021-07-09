@@ -12,10 +12,12 @@
   box-sizing: border-box;
   font-family: 'Inter', sans-serif;
 }
+
+/* ------------------Main Section---------------*/
 .big-container {
   display: flex;
   width: auto;
-  height: 100vh;
+  height: 100%;
   flex-flow: row wrap;
 }
 .bg-morning {
@@ -123,6 +125,34 @@
 .btn-arrow-up {
   transform: rotate(0deg);
 }
+
+@media only screen and (max-width: 950px) {
+  .big-container {
+    flex-flow: column;
+    height: 100vh;
+  }
+  .main-container {
+    flex-basis: 100%;
+  }
+  .time-container {
+    margin-top: 15%
+  }
+  .bg-morning {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url('starter-code/assets/tablet/bg-image-daytime.jpg');
+  }
+  .bg-evening {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url('starter-code/assets/mobile/bg-image-nighttime.jpg');
+  }
+  .button-container {
+    flex-basis: 100%;
+    height: auto;
+    margin: 5% 0 0 10%;
+  }
+  .btn-more {
+    margin-top: 0;
+  }
 
 /* EXPANDED SECTION  */
 .bg-white {
