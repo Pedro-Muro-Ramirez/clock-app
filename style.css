@@ -82,12 +82,12 @@
 }
 .time {
   font-size: 800%;
-  flex-basis: 50%;
+  flex-basis: 40%;
   font-weight: 700;
 }
 .time-zone {
   font-size: 300%;
-  flex-basis: 50%;
+  flex-basis: 40%;
   margin-bottom: 3%;
   align-self: flex-end;
 }
@@ -144,7 +144,7 @@
   }
   .bg-evening {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url('starter-code/assets/mobile/bg-image-nighttime.jpg');
+      url('starter-code/assets/tablet/bg-image-nighttime.jpg');
   }
   .button-container {
     flex-basis: 100%;
@@ -206,6 +206,25 @@
 }
 
 @media only screen and (max-width: 768px) {
+  .bg-morning {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url('starter-code/assets/mobile/bg-image-daytime.jpg');
+  }
+  .bg-evening {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url('starter-code/assets/mobile/bg-image-nighttime.jpg');
+  }
+  .quote-container {
+    width: 400px;
+  }
+  .time {
+    font-size: 600%;
+    flex-basis: 30%;
+  }
+  .time-zone {
+    font-size: 200%;
+    flex-basis: 30%;
+  }
   .info-container {
     flex-flow: column;
     margin-left: 5%;
@@ -227,6 +246,15 @@
   .expanded-text {
     font-size: 220%;
     margin-top: 0;
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  .time {
+    flex-basis: 30%;
+  }
+  .time-zone {
+    flex-basis: 30%;
   }
 }
 

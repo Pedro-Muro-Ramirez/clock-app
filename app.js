@@ -39,7 +39,6 @@ let today = function () {
   document.querySelector('.time').innerHTML = liveTime;
 };
 today();
-console.log(today);
 setInterval(today, 1000);
 
 //Change Background
@@ -70,6 +69,7 @@ const backgroundChange = function () {
 backgroundChange();
 setInterval(backgroundChange, 1000);
 
+///Button functionality
 const btnLogic = function () {
   const btn = document.querySelector('.btn-more');
   const btnText = document.querySelector('.btn-text');
