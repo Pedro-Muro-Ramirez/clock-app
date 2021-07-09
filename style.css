@@ -130,12 +130,13 @@
   .big-container {
     flex-flow: column;
     height: 100vh;
+    /* overflow-y: scroll; */
   }
   .main-container {
     flex-basis: 100%;
   }
   .time-container {
-    margin-top: 15%
+    margin-top: 15%;
   }
   .bg-morning {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
@@ -153,6 +154,7 @@
   .btn-more {
     margin-top: 0;
   }
+}
 
 /* EXPANDED SECTION  */
 .bg-white {
@@ -180,7 +182,7 @@
   font-size: 105%;
   letter-spacing: 1px;
 }
-.expaned-text {
+.expanded-text {
   font-size: 240%;
   font-weight: 700;
   margin-top: 2%;
@@ -203,6 +205,32 @@
   text-align: center;
 }
 
+@media only screen and (max-width: 768px) {
+  .info-container {
+    flex-flow: column;
+    margin-left: 5%;
+  }
+  .expanded-time-zone {
+    flex-basis: 100%;
+  }
+  .day-of-week {
+    flex-basis: 100%;
+    text-align: left;
+  }
+  .day-of-year {
+    flex-basis: 100%;
+  }
+  .week {
+    flex-basis: 100%;
+    text-align: left;
+  }
+  .expanded-text {
+    font-size: 220%;
+    margin-top: 0;
+  }
+}
+
+/*show or hide*/
 .hidden {
   display: none;
 }
