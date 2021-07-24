@@ -207,7 +207,7 @@
       url('starter-code/assets/mobile/bg-image-nighttime.jpg');
   }
   .quote-container {
-    width: 400px;
+    width: 250px;
   }
   .time {
     font-size: 600%;
@@ -236,7 +236,7 @@
     text-align: left;
   }
   .expanded-text {
-    font-size: 220%;
+    font-size: 170%;
     margin-top: 0;
   }
 }
